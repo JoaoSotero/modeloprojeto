@@ -5,25 +5,48 @@
 <title>HISTORIAR</title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
+<link rel="stylesheet" href="css/glide.core.css">
 <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
 <link href="https://fonts.googleapis.com/css2?family=Notable&display=swap" rel="stylesheet">
-<link href="default.css" rel="stylesheet" type="text/css" media="all" />
-<link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/index.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/fonts.css" rel="stylesheet" type="text/css" media="all" />
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+crossorigin="anonymous"></script>
+<script src="js/index.js"></script>
+
+
 
 </head>
 <body>
 <div id="header-wrapper">
-	<div id="header" class="container">
+	<div id="header" class="containerdrop">
 		<div id="logo">
-			<h1><a href="#">HISTORIAR</a></h1>
+			<h1><a href="index.html">HISTORIAR</a></h1>
 		</div>
 		<div id="menu">
 			<ul>
-				<li><a href="#" accesskey="1" title="">ARTISTAS</a></li>
-				<li><a href="#" accesskey="2" title="">DRAMATURGIA</a></li>
-				<li><a href="#" accesskey="3" title="">GRUPOS</a></li>
-				<li><a href="#" accesskey="4" title="">GALERIA</a></li>
-				<li><a href="#" accesskey="5" title="">TEATROS</a></li>
+				<li><a onclick="myFunction()" class="dropbtn">ARTISTAS</a></li>
+				<li><a href="dramaturgia.html" accesskey="2" title="">DRAMATURGIA</a></li>
+				<li><a href="futuro.html" accesskey="3" title="">GRUPOS</a></li>
+				<li><a href="galeria.html" accesskey="4" title="">GALERIA</a></li>
+				<li><a href="futuro.html" accesskey="5" title="">TEATROS</a></li>
+				<div class="dropdown" id="dropdown">
+					<div id="myDropdown" class="dropdown-content">
+					  <a href="#" onclick="tipo(event)" id="todos">TODOS</a>
+					  <a href="#" onclick="tipo(event)" id="diretor">DIRETOR</a>
+					  <a href="#" onclick="tipo(event)" id="ator">ATOR</a>
+					  <a href="#" onclick="tipo(event)" id="dramaturgo">DRAMATURGO</a>
+					  <a href="#" onclick="tipo(event)" id="pesquisador">PESQUISADOR</a>
+					  <a href="#" onclick="tipo(event)" id="produtor">PRODUTOR</a>
+					</div>
+				  </div>
 			</ul>
 		</div>
 	</div>
@@ -34,17 +57,47 @@
 		<div class="title">
 			<h2>BIBLIOTECA VIRTUAL</h2>
 			<span>De um apanhado histórico sobre o teatro no Rio Grande do Norte</span> </div>
-		<div class="boxA"><img src="images/pic01.jpg" width="300" height="450" alt="Dix-Huit Rosado" /></div>
-		<div class="boxB"><img src="images/pic02.jpg" width="300" height="450" alt="Alberto Maranhão" /></div>
-		<div class="boxC"><img src="images/pic03.jpg" width="300" height="450" alt="Casa da Ribeira" /></div>
+		<div class="boxA">
+			<div class="glide">
+			<div class="glide__track" data-glide-el="track">
+			  <ul class="glide__slides">
+				<li class="glide__slide"><img src="Imagens Index/pic01.jpg" width="300" height="450" alt="Dix-Huit Rosado" class="imagemcinza"/></li>
+				<li class="glide__slide"><img src="Imagens Index/pic01-02.jpg" width="300" height="450" alt="Alberto Maranhão" class="imagemcinza"/></li>
+				<li class="glide__slide"><img src="Imagens Index/pic01-03.jpg" width="300" height="450" alt="Casa da Ribeira" class="imagemcinza"/></li>
+			  </ul>
+			</div>
+		  </div>
+		</div>
+		<div class="boxB">
+			<div class="glide2">
+				<div class="glide__track" data-glide-el="track">
+				  <ul class="glide__slides">
+					<li class="glide__slide"><img src="Imagens Index/pic02.jpg" width="300" height="450" alt="Dix-Huit Rosado" class="imagemcinza"/></li>
+					<li class="glide__slide"><img src="Imagens Index/pic02-02.jpg" width="300" height="450" alt="Alberto Maranhão" class="imagemcinza"/></li>
+					<li class="glide__slide"><img src="Imagens Index/pic02-03.jpg" width="300" height="450" alt="Casa da Ribeira" class="imagemcinza"/></li>
+				  </ul>
+				</div>
+			  </div>
+		</div>
+		<div class="boxC">
+			<div class="glide3">
+				<div class="glide__track" data-glide-el="track">
+				  <ul class="glide__slides">
+					<li class="glide__slide"><img src="Imagens Index/pic03.jpg" width="300" height="450" alt="Dix-Huit Rosado" class="imagemcinza"/></li>
+					<li class="glide__slide"><img src="Imagens Index/pic03-02.jpg" width="300" height="450" alt="Alberto Maranhão" class="imagemcinza"/></li>
+					<li class="glide__slide"><img src="Imagens Index/pic03-03.jpg" width="300" height="450" alt="Casa da Ribeira" class="imagemcinza"/></li>
+				  </ul>
+				</div>
+			  </div>
+		</div>
 	</div>
 	<div id="page" class="container">
 		<div class="boxA">
 			<h2>ACESSE NOSSO CANAL NO YOUTUBE</h2>
 			<ul class="style4">
-				<li><img src="images/Racine.png" alt="Racine" width="120" height="72"> Racine Santos</li>
-				<li><img src="images/ivonete.png" alt="ivonete" width="120" height="72"> Ivonete Albano</li>
-				<li><img src="images/othon.png" alt="othon" width="120" height="72"> Sônia Othon</li>
+				<li><img src="imagens/Racine.png" alt="Racine" width="120" height="72"> Racine Santos</li>
+				<li><img src="imagens/ivonete.png" alt="ivonete" width="120" height="72"> Ivonete Albano</li>
+				<li><img src="imagens/othon.png" alt="othon" width="120" height="72"> Sônia Othon</li>
 			</ul>
 		</div>
 		<div class="boxB">
@@ -66,11 +119,11 @@
 		<div class="boxC">
 			<h2>Sigam Nossas Redes Sociais </h2>
 			<ul class="style4">
-				<li><h3>@<a href="#">HistoriarIG</a></h3></li>
-				<li><h3>@<a href="#">RebekaCarozza</a></h3></li>
-				<li><h3>@<a href="#">Chaconbolinho</a></h3></li>
-				<li><h3>@<a href="#">Dicc.Galdino</a></h3></li>
-				<li><h3>@<a href="#">Gil_araujo</a></h3></li>
+				<li><h3>@<a href="https://www.instagram.com/">HistoriarIG</a></h3></li>
+				<li><h3>@<a href="https://www.instagram.com/rebekacarozza/">RebekaCarozza</a></h3></li>
+				<li><h3>@<a href="https://www.instagram.com/chaconbolinho/">Chaconbolinho</a></h3></li>
+				<li><h3>@<a href="https://www.instagram.com/dixx.galadino/">Dicc.Galdino</a></h3></li>
+				<li><h3>@<a href="https://www.instagram.com/gil_araujjo/">Gil_araujo</a></h3></li>
 			</ul>
 		</div>
 	</div>
@@ -84,5 +137,27 @@
 <div id="copyright" class="container">
 	<p>Realização Nuarte IFRN Campus Parnamirim</p>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+<script>
+	new Glide('.glide', {
+  type: 'carousel',
+  autoplay: 3000,
+  hoverpause: true,
+}).mount()
+</script>
+<script>
+	new Glide('.glide2', {
+  type: 'carousel',
+  autoplay: 3000,
+  hoverpause: true,
+}).mount()
+</script>
+<script>
+	new Glide('.glide3', {
+  type: 'carousel',
+  autoplay: 3000,
+  hoverpause: true,
+}).mount()
+</script>
 </body>
 </html>
