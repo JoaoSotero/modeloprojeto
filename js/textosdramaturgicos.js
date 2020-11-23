@@ -2,6 +2,7 @@ window.onload = console.log(localStorage.getItem("e"));
 let e = localStorage.getItem("e");
 
   $("li").not(`.${e}`).hide();
+  $(".apareca").show();
 
 
 function sumir(string){

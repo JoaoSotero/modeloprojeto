@@ -1,20 +1,3 @@
-function pesquisar() {
-    var input, filtro, ul, li, a, i, texto;
-    input = document.getElementById("input");
-    filtro = input.value.toUpperCase();
-    ul = document.getElementById("textos");
-    li = ul.getElementsByTagName("li");
-    for (i = 0; i < li.length; i++) {
-        a = li[i].getElementsByTagName("div")[0];
-        texto = a.textContent || a.innerText;
-        if (texto.toUpperCase().indexOf(filtro) > -1) {
-            li[i].style.display = "";
-        } else {
-            li[i].style.display = "none";
-        }
-    }
-}
-
 function myFunction() {
   document.getElementById("myDropdown").classList.toggle("show");
 }
@@ -52,9 +35,4 @@ function tipo(t){
 function tipoGaleria(t){
 console.log(localStorage.setItem("t", t.target.id));
 window.location.href="galeria.html";
-}
-
-function info(e){
-  console.log(localStorage.setItem("e", e.target.id));
-  window.location.href="dramaturgiainfo.html"
 }
